@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputOp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:textSize="30dp"
+            android:gravity="right|bottom"
+            android:inputType="textPersonName"
+
+          style="@style/inputStyle"
+            />
+
+        <EditText
+            style="@style/inputStyle"
+
+            android:id="@+id/inputRes"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:gravity="right"
+
+
+            android:inputType="textPersonName"
+
+           />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sinBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="sinFun"
+            android:tag="sin"
+            android:text="Sin"
+            android:background="@drawable/rounded_button"
+            />
+
+        <Button
+            android:id="@+id/cosBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="cosFun"
+            android:tag="cos"
+            android:text="Cos" />
+
+        <Button
+            android:id="@+id/tanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="tanFun"
+            android:tag="tan"
+            android:text="Tan" />
+
+        <Button
+            android:id="@+id/piBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_weight="1"
+            android:onClick="piFun"
+            android:tag="3.14159265359"
+            android:text="π" />
+    </LinearLayout>
+
+
+    <!-- Second operation row-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sqrRt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="sqrRtFun"
+            android:tag="root"
+            android:text="√x" />
+
+        <Button
+            android:id="@+id/square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="sqrFun"
+            android:tag="sqrFun"
+            android:text="x^2 " />
+
+        <Button
+            android:id="@+id/cube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="cubeFun"
+            android:tag="cube"
+            android:text="x^3" />
+        <Button
+            android:id="@+id/ln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="lnFun"
+            android:tag="ln"
+            android:text="LN"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+    <!-- third operation row-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/factorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="facto"
+            android:tag="facto"
+            android:text="n!"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/rounded_button"
+
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:onClick="loga"
+            android:tag="log"
+            android:text="log "
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+
+            android:layout_weight="1"
+            android:tag="eFun"
+            android:onClick="eFun"
+
+            android:text="e"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/expo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+      android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:onClick="power"
+            android:tag="pow"
+            android:text="10^x"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:columnCount="5"
+        app:rowCount="4"
+        android:layout_marginLeft="6dp"
+        >
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+
+            android:background="@drawable/gradient_btn"
+            android:onClick="buttonIdentify"
+            android:tag="7"
+            android:text="7"
+
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="8"
+            android:text="8"
+            android:textSize="24sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="9"
+            android:text="9"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonPar1"
+            android:layout_width="58dp"
+
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/opration"
+
+            android:onClick="buttonIdentify"
+            android:tag="("
+            android:text="("
+            android:textSize="24sp"
+            app:backgroundTint="@color/opration"/>
+
+        <Button
+            android:id="@+id/buttonPar2"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:background="@color/opration"
+
+            android:onClick="buttonIdentify"
+            android:tag=")"
+            android:text=")"
+            android:textSize="24sp"
+            app:backgroundTint="@color/opration" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+
+            android:background="@drawable/gradient_btn"
+            android:onClick="buttonIdentify"
+            android:tag="4"
+            android:text="4"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="5"
+            android:text="5"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="6"
+            android:text="6"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonMul"
+            android:layout_width="58dp"
+
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+
+            android:onClick="buttonIdentify"
+            android:tag="*"
+            android:text="✖"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+            android:onClick="buttonIdentify"
+            android:tag="/"
+            android:text="÷"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+
+            android:background="@drawable/gradient_btn"
+            android:onClick="buttonIdentify"
+            android:tag="1"
+            android:text="1"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="2"
+            android:text="2"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="buttonIdentify"
+            android:tag="3"
+            android:text="3"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="58dp"
+
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+            android:onClick="buttonIdentify"
+            android:tag="+"
+            android:text="+"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonSub"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+            android:onClick="buttonIdentify"
+            android:tag="-"
+            android:text="-"
+            android:textSize="24sp" />
+
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+
+            android:onClick="buttonIdentify"
+            android:tag="."
+            android:text="."
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+
+            android:background="@drawable/gradient_btn"
+            android:onClick="buttonIdentify"
+            android:tag="0"
+            android:text="0"
+            android:textSize="24sp" />
+
+
+
+        <Button
+            android:id="@+id/buttonExp"
+            android:layout_width="56dp"
+
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+            android:onClick="buttonIdentify"
+            android:tag="^"
+            android:text="^"
+            android:textSize="24sp" />
+        <Button
+            android:id="@+id/buttonDel"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="3dp"
+
+            android:background="@color/opration"
+            app:backgroundTint="@color/opration"
+
+            android:tag="c"
+            android:text="C"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonEq"
+            android:layout_width="58dp"
+            android:layout_height="72dp"
+
+            android:background="@drawable/gradient_btn"
+
+            android:onClick="evalResult"
+            android:tag="equal"
+            android:text="="
+            android:textSize="24sp" />
+
+
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
